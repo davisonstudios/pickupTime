@@ -1,14 +1,24 @@
-import { useEffect, useState } from "react"
+import { useState, useEffect } from "react"
 import Card from "../components/card"
-import {getRecs} from "../utilities/airtableData"
+import css from '../styles/Home.module.css'
+import {getRecs, updateRec} from "../utilities/airtableData.js"
 
 
 function PickupTime() {
     const [dirty, setDirty] = useState(false)
     const [students, setStudents] = useState([])
 
+    let timerID = 0
+
     useEffect(() => {
-        getRecs(setStudents)
+        clearTimeout(timerID)
+
+        function completion(students) {
+            // alert(`completion called, ${students.length}`)
+            setStudents(students)
+            timerID = setTimeout(update, 20000)
+        }
+        getRecs(completion)
     }, [dirty]);
 
     function update() {
@@ -16,33 +26,31 @@ function PickupTime() {
         setDirty(!dirty)
     }
 
-    // GetRecs()
-    setInterval(update, 15000)
-
-    const styles = {
-        heading: {
-            width: '90%',
-            textAlign: 'left',
-        }
+    function toggleReady(student) {
+        // alert( `toggling ${student.name}` )
+        student.ready = !student.ready
+        student.time = null
+        // props.update(student)
+        updateRec(student, update)
     }
 
     return (
-        <div margin='auto' align='center'>
+        <div className={css.main} align='center'>
             <button onClick={update}>
                 Check Now
             </button>
-            <div style={styles.heading}><h1>Ready For Pickup</h1></div>
+            <div className={css.heading}><h1>Ready For Pickup</h1></div>
             {
                 students.filter( student => student.ready )
                 .map( student => (
-                    <Card key={student.id} student={student} update={update} />
+                    <Card key={student.id} student={student} toggleReady={toggleReady} />
                 ))
             }
-            <div style={styles.heading}><h1>Not Ready</h1></div>
+            <div className={css.heading}><h1>Not Ready</h1></div>
             {
                 students.filter( student => !student.ready )
                 .map( student => (
-                    <Card key={student.id} student={student} update={update} />
+                    <Card key={student.id} student={student} toggleReady={toggleReady} />
                 ))
             }
         </div>

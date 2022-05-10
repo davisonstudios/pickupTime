@@ -1,41 +1,24 @@
-import { useState } from "react"
-import {updateRec} from "../utilities/airtableData"
+import css from '../styles/Card.module.css'
+import { format, parseISO } from 'date-fns'
 
 function Card(props) {
-    let student = props.student
-    const [ready, setReady] = useState(student.ready)
+    const {student, toggleReady} = props
 
-    const styles = {
-        card: {
-            width: '90%',
-            height: '30px',
-            backgroundColor: '#999',
-            color: 'blue',
-            // borderRadius: '15px',
-            marginBottom: '1px',
-        },
-        contents: {
-            width: '100%',
-            height: '100%',
-            padding: '5px 20px',
-            backgroundColor: '#ccc',
-            textAlign: 'left',
-            // borderRadius: '15px 15px 0px 0px',
-        },
-    }
-
-    function toggleReady() {
-        // setReady( !ready )
-        student.ready = !student.ready
-        updateRec(student, props.update)
+    function formattedTime() {
+        if (student.ready && student.time) {
+            const d = parseISO(student.time)
+            return format(d, "hh:mm aaaaa'm' dd/yy")
+        }
+        return ""
     }
 
     return (
-        <div style={styles.card}>
-            <div style={styles.contents}>
-                <input type="checkbox" id={student.id} checked={ready} onChange={toggleReady} />
-                <label htmlFor={student.id}>{student.name}</label>
-            </div>
+        <div className={css.card}>
+            <span className={css.contents}>
+                <span className={student.ready ? css.name_ready : css.name}>{student.name}</span>
+                <span className={css.time}>{formattedTime()}</span>
+                <button className={css.readyButton} onClick={()=>{toggleReady(student)}}>{!student.ready ? 'Ready' : 'Picked Up'}</button>
+            </span>
         </div>
     )
 }

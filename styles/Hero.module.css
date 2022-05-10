@@ -1,0 +1,38 @@
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 800px;
+    width: 100%;
+    background-position: top;
+    background-size: cover;
+    background-image: url('https://ak4.picdn.net/shutterstock/videos/15952804/thumb/1.jpg');
+}
+.hero::after {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #fff 100%);
+    margin-top: 400px;
+    height: 800px;
+    width: 100%;
+    content: '';
+}
+
+.headline {
+    position: relative;
+    top: 350px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 5vw;
+    font-weight: 600;
+    color: #bab2b5;
+    text-shadow: 2px 2px 8px #000c;
+}
+
+.detail {
+    position: relative;
+    top: 360px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 300;
+    font-size: 3vw;
+    color: white;
+    text-shadow: 2px 2px 8px #000c;
+}

@@ -1,0 +1,53 @@
+
+.card {
+    width: 90%;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 5px;
+    margin-bottom: 1px;
+    max-width: 1440px;
+}
+
+.contents {
+    width: 100%;
+    height: 100%;
+    padding: 5px 10px;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+}
+
+.name {
+    color: blue;
+    flex-basis: 10%;
+    flex-grow: 6;
+    font-size: 1rem;
+}
+
+.name_ready {
+    composes: name;
+    color: red;
+}
+
+.time {
+    flex-grow: 1;
+    color: #777;
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 400px) {
+    .card {
+        border-radius: 0px;
+        margin-bottom: 0px;
+    }
+    
+    .name {
+        color: green;
+        font-size: 0.8rem;
+    }
+
+    .time {
+        color: #800;
+        font-size: 0.5rem;
+    }
+}

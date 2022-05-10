@@ -1,12 +1,13 @@
 import Airtable from "airtable"
 var base = new Airtable({apiKey: 'keyG1C4CAi8IIfhzl'}).base('appiNbdhtsY6TzROo')
 
+
 function getRecs(completion) {
-    const students = []
+    const newStudents = []
 
     base('Students').select({
         // Selecting the first 3 records in Grid view:
-        maxRecords: 50,
+        maxRecords: 300,
         view: "Students"
     }).eachPage(function page(records, fetchNextPage) {
         records.map(record => {
@@ -14,8 +15,9 @@ function getRecs(completion) {
                 id: record.get('id'),
                 name: record.get('Name'),
                 ready: record.get('Pickup Ready'),
+                time: record.get('Event Time'),
             }
-            students.push( newRec )
+            newStudents.push( newRec )
         })
     
         // To fetch the next page of records, call `fetchNextPage`.
@@ -24,7 +26,7 @@ function getRecs(completion) {
         fetchNextPage()
     }, function done(err) {
         if (err) { console.error(err); return; }
-        completion( students )
+        completion( newStudents )
     })        
 }
 

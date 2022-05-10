@@ -1,0 +1,39 @@
+
+.content {
+    margin: -80px 50px 75px;
+}
+
+.headline {
+    width: 100%;
+    font-family: Verdana;
+    font-weight: 600;
+    font-size: 48px;
+    letter-spacing: -0.015em;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1em;
+    row-gap: 1.5em;
+    margin-top: 20px;
+}
+
+.widefeatures {
+    display: grid;
+    grid-template-rows: 1fr;
+    row-gap: 1.5em;
+    margin-top: 40px;
+}
+
+@media screen and (max-width: 900px) {
+    .headline {
+        font-size: 40px;
+    }
+
+    .features {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 20px;
+    }
+}
