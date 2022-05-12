@@ -11,7 +11,7 @@ function WideFeature(props) {
                     <div>{title}</div>
                 </div>
                 <div className={css.detail}>
-                    <div>{detail}</div>
+                    <p>{detail}</p>
                 </div>
             </div>
        </div>

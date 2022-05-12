@@ -87,6 +87,12 @@ export const content = {
                 title: 'Corporate Events',
                 detail: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.'
             },
+            {
+                imageOnRight: false,
+                imageUrl: 'https://static-maps.yandex.ru/1.x/?lang=en-US&ll=-118.475076,34.200977&z=13&l=map&size=600,450&pt=-118.475076,34.200977,flag',
+                title: 'Contact Us',
+                detail: "123 Some Street Some City, State 99999",
+            },
         ],
     },
 }

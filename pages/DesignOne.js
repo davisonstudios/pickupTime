@@ -26,10 +26,15 @@ function Site() {
                         <WideFeature key={index} content={feature} />
                     ))}
                 </div>
-                <a name='contact' />
-                <div>
+                {/* <a name='contact' />
+                <div style={justify: 'center'}>
+                    <p>
+                        123 Lorem Ipsum
+                        Somewhere, USA 99999
+                    </p>
+
                     <img width="600" src="https://static-maps.yandex.ru/1.x/?lang=en-US&ll=-118.475076,34.200977&z=13&l=map&size=600,450&pt=-118.475076,34.200977,flag" alt="Yandex Map of -118.475076,34.200977" />
-                </div>
+                </div> */}
             </div>
         </div>
     )

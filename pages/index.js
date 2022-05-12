@@ -1,60 +1,95 @@
-import { useState, useEffect } from "react"
-import Card from "../components/card"
-import css from '../styles/Home.module.css'
-import {getRecs, updateRec} from "../utilities/airtableData.js"
+import react from "react";
+import Link from "next/link";
+import styled from "styled-components"
+import { loremIpsum, LoremIpsum } from "lorem-ipsum";
 
+const Container = styled.section`
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(150deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 11%, rgba(0,212,255,1) 100%);
+    // justify-content: space-around;
+    align-items: stretch;
+    row-gap: 20px;
+    padding: 40px 180px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+`;
 
-function PickupTime() {
-    const [dirty, setDirty] = useState(false)
-    const [students, setStudents] = useState([])
+const Box = styled.div`
+    background-color: #fafafa;
+    border: 1px #ccc solid;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 10px;
+    // flex-basis: 400px;
+    // flex:1;
+`
 
-    let timerID = 0
+const Box1 = styled(Box)`
+    // order: 2;
+    // flex: 2;
+    // align-self: flex-start;
+`
+const Box2 = styled(Box)`
+    // order: 1;
+    // align-self: flex-end;
+`
 
-    useEffect(() => {
-        clearTimeout(timerID)
+// const Headline = styled.h1`
+//     font-size: 24px;
+//     font-family: Verdana;
+//     font-weight: 900;
+// `;
 
-        function completion(students) {
-            // alert(`completion called, ${students.length}`)
-            setStudents(students)
-            timerID = setTimeout(update, 20000)
-        }
-        getRecs(completion)
-    }, [dirty]);
+// const RedLine = styled(Headline)`
+//     color: ${props => props.color || '#f00'};
+//     grid-row-start: ${props => props.row || 1};
+//     background-color: #eee;
+// `;
 
-    function update() {
-        // alert('UPDATING')
-        setDirty(!dirty)
+const Anchor = styled.a`
+    color: blue;
+    font-family: 'Special Elite', cursive;
+    font-size: 30px;
+    font-weight: bold;
+    &:hover {
+        color: red;
+        font-size: 26px;
     }
+`
 
-    function toggleReady(student) {
-        // alert( `toggling ${student.name}` )
-        student.ready = !student.ready
-        student.time = null
-        // props.update(student)
-        updateRec(student, update)
-    }
-
-    return (
-        <div className={css.main} align='center'>
-            <button onClick={update}>
-                Check Now
-            </button>
-            <div className={css.heading}><h1>Ready For Pickup</h1></div>
-            {
-                students.filter( student => student.ready )
-                .map( student => (
-                    <Card key={student.id} student={student} toggleReady={toggleReady} />
-                ))
-            }
-            <div className={css.heading}><h1>Not Ready</h1></div>
-            {
-                students.filter( student => !student.ready )
-                .map( student => (
-                    <Card key={student.id} student={student} toggleReady={toggleReady} />
-                ))
-            }
-        </div>
-    )
+const SiteLink = (props) => {
+    const {href, title} = props
+    return <Link href={href}><Anchor>{title}</Anchor></Link>
 }
 
-export default PickupTime
+const Description = styled.p`
+    font-family: 'Josefin Slab';
+    font-size: 20px;
+`
+
+const Home = () => {
+
+    const item1 = loremIpsum({count: 1, units: 'paragraph'})
+    const item2 = loremIpsum({count: 1, units: 'paragraph'})
+    const item3 = loremIpsum({count: 1, units: 'paragraph'})
+
+    return <Container>
+        <Box2>
+            <SiteLink href='/DesignOne' title='Event Site Idea 1' />
+            {/* <Link href='/DesignOne'><Anchor>Design One</Anchor></Link> */}
+            <Description>{item1}</Description>
+        </Box2>
+        <Box2>
+            <SiteLink href='/DesignOne' title='Event Site Idea 2' />
+            <Description>{item2}</Description>
+        </Box2>
+        <Box2>
+            <SiteLink href='/PickupTime' title='Pickup Time' />
+            <Description>{item3}</Description>
+        </Box2>
+    </Container>
+}
+
+export default Home
