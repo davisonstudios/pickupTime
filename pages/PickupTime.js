@@ -1,43 +1,37 @@
-import react from "react"
-import { useState, useEffect } from "react"
+import { useCallback, useState, useEffect } from "react"
 import Card from "../components/card"
 import css from '../styles/Home.module.css'
 import {getRecs, updateRec} from "../utilities/airtableData.js"
 
 
 function PickupTime() {
-    const [dirty, setDirty] = useState(false)
     const [students, setStudents] = useState([])
 
-    let timerID = 0
+    const updateData = useCallback(() => {
+        getRecs((airtableStudents) => setStudents(airtableStudents))
+    }, [])
 
     useEffect(() => {
-        clearTimeout(timerID)
+        updateData()
 
-        function completion(students) {
-            // alert(`completion called, ${students.length}`)
-            setStudents(students)
-            timerID = setTimeout(update, 20000)
+        const interval = setInterval(() => updateData(), 2e4)
+
+        return function cleanup () {
+            clearInterval(interval)
         }
-        getRecs(completion)
-    }, [dirty]);
-
-    function update() {
-        // alert('UPDATING')
-        setDirty(!dirty)
-    }
+    }, [updateData])
 
     function toggleReady(student) {
         // alert( `toggling ${student.name}` )
         student.ready = !student.ready
         student.time = null
         // props.update(student)
-        updateRec(student, update)
+        updateRec(student, updateData)
     }
 
     return (
         <div className={css.main} align='center'>
-            <button onClick={update}>
+            <button onClick={updateData}>
                 Check Now
             </button>
             <div className={css.heading}><h1>Ready For Pickup</h1></div>

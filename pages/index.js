@@ -1,4 +1,4 @@
-import react from "react";
+import react, {useEffect, useState} from "react";
 import Link from "next/link";
 import styled from "styled-components"
 import { loremIpsum, LoremIpsum } from "lorem-ipsum";
@@ -70,10 +70,15 @@ const Description = styled.p`
 `
 
 const Home = () => {
-
-    const item1 = loremIpsum({count: 1, units: 'paragraph'})
-    const item2 = loremIpsum({count: 1, units: 'paragraph'})
-    const item3 = loremIpsum({count: 1, units: 'paragraph'})
+    const [item1, setItem1] = useState('');
+    const [item2, setItem2] = useState('');
+    const [item3, setItem3] = useState('');
+    
+    useEffect(() => {
+        setItem1(loremIpsum({count: 1, units: 'paragraph'}));
+        setItem2(loremIpsum({count: 1, units: 'paragraph'}));
+        setItem3(loremIpsum({count: 1, units: 'paragraph'}));
+    }, []);
 
     return <Container>
         <Box2>
