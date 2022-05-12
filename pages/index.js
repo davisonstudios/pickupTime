@@ -34,6 +34,7 @@ const Box1 = styled(Box)`
 const Box2 = styled(Box)`
     // order: 1;
     // align-self: flex-end;
+    transform: rotate(${props => props.rotate || 0});
 `
 
 // const Headline = styled.h1`
@@ -81,16 +82,16 @@ const Home = () => {
     }, []);
 
     return <Container>
-        <Box2>
+        <Box2 rotate='-2deg'>
             <SiteLink href='/DesignOne' title='Event Site Idea 1' />
             {/* <Link href='/DesignOne'><Anchor>Design One</Anchor></Link> */}
             <Description>{item1}</Description>
         </Box2>
-        <Box2>
+        <Box2 rotate='3deg'>
             <SiteLink href='/DesignOne' title='Event Site Idea 2' />
             <Description>{item2}</Description>
         </Box2>
-        <Box2>
+        <Box2 rotate='-2deg'>
             <SiteLink href='/PickupTime' title='Pickup Time' />
             <Description>{item3}</Description>
         </Box2>
