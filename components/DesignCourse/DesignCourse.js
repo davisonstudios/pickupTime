@@ -5,7 +5,6 @@ import Hero from "../DesignCourse/Hero"
 import Link from "next/link"
 import Testimonials from "./Testimonials"
 import CompDesign from "./CompDesign"
-import { SiteLogo } from "./Assets/svgs"
 
 const Container = styled.section`
     display: flex;
@@ -77,7 +76,7 @@ const DesignCourse = (props) => {
     ]
 
     return <Container>
-        <CourseNav title='Design Course' logo={SiteLogo} menus={menus} />
+        <CourseNav title='Design Course' menus={menus} />
         <Content>
             <Hero />
             <LearnHow />

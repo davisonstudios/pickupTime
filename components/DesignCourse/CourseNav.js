@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import Link from "next/link";
-// import { SiteLogo } from "./Assets/svgs";
+import { SiteLogo } from "./Assets/svgs";
 
 const Container = styled.div`
     display: flex;
@@ -56,12 +56,11 @@ const MenuItem = props => {
 
 const CourseNav = props => {
     const {title, menus} = props
-    const Logo = <props.logo width={30} height={30} color='#0f0' />
 
     return (
         <Container>
             <TitleDiv>
-                {Logo}
+                <SiteLogo width={30} height={30} color='#0f0' />
                 <Title>{title}</Title>
             </TitleDiv>
             <Menus>
