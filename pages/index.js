@@ -10,7 +10,7 @@ const Container = styled.section`
     // justify-content: space-around;
     align-items: stretch;
     row-gap: 20px;
-    padding: 40px 180px;
+    padding: 60px 180px;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -34,7 +34,7 @@ const Box1 = styled(Box)`
 const Box2 = styled(Box)`
     // order: 1;
     // align-self: flex-end;
-    transform: rotate(${props => props.rotate || 0});
+    transform: rotate(${props => props.rotate || 0}) skew(${props => props.skew || 0});
 `
 
 // const Headline = styled.h1`
@@ -56,7 +56,7 @@ const Anchor = styled.a`
     font-weight: bold;
     &:hover {
         color: red;
-        font-size: 26px;
+        // font-size: 36px;
     }
 `
 
@@ -82,16 +82,15 @@ const Home = () => {
     }, []);
 
     return <Container>
-        <Box2 rotate='-2deg'>
+        <Box2 rotate='-2deg' skew='-25deg'>
             <SiteLink href='/DesignOne' title='Event Site Idea 1' />
-            {/* <Link href='/DesignOne'><Anchor>Design One</Anchor></Link> */}
             <Description>{item1}</Description>
         </Box2>
-        <Box2 rotate='3deg'>
-            <SiteLink href='/DesignOne' title='Event Site Idea 2' />
+        <Box2 rotate='2deg' skew='25deg'>
+            <SiteLink href='/DesignCourse' title='Design Course Knockoff' />
             <Description>{item2}</Description>
         </Box2>
-        <Box2 rotate='-2deg'>
+        <Box2 rotate='-2deg' skew='-25deg'>
             <SiteLink href='/PickupTime' title='Pickup Time' />
             <Description>{item3}</Description>
         </Box2>
