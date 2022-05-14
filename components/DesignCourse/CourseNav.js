@@ -41,7 +41,7 @@ const Anchor = styled.a`
     font-size: 1.5em;
     font-weight: 100;
     &:hover {
-        color: #d0d;
+        color: #0f0;
         font-weight: bold;
     }
 `
