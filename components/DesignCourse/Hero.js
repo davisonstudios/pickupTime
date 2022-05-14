@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import logo from '../../images/Logo1.svg'
+import logo from '../../images/Logo.svg'
 import Image from "next/image"
 
 const Container = styled.div`
@@ -7,6 +7,7 @@ const Container = styled.div`
     flex-direction: column;
     justify-content: center;
     height: 300px;
+    margin: 100px 0 0;
     /* background-color: aquamarine; */
 `
 
