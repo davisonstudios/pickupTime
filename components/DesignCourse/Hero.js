@@ -1,6 +1,5 @@
 import styled from "styled-components"
-import logo from '../../images/Logo.svg'
-import Image from "next/image"
+import { SiteLogo } from "./Assets/svgs"
 
 const Container = styled.div`
     display: flex;
@@ -50,7 +49,7 @@ const Hero = () => {
             Our Interactive UI/UX Course will help you design better & earn more.
         </Detail>
         <ImageWrapper>
-            <Image src={logo.src} width={250} height={250} />
+            <SiteLogo height='250' width='250' color='#0f0' />
         </ImageWrapper>
     </Container>
 }

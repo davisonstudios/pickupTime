@@ -1,11 +1,11 @@
 
 import styled from "styled-components"
-import CourseNav from "./NavBar"
-import logo from '../../images/Logo.svg'
+import CourseNav from "./CourseNav"
 import Hero from "../DesignCourse/Hero"
 import Link from "next/link"
 import Testimonials from "./Testimonials"
 import CompDesign from "./CompDesign"
+import { SiteLogo } from "./Assets/svgs"
 
 const Container = styled.section`
     display: flex;
@@ -77,7 +77,7 @@ const DesignCourse = (props) => {
     ]
 
     return <Container>
-        <CourseNav title='Design Course' logo={logo.src} menus={menus} />
+        <CourseNav title='Design Course' logo={SiteLogo} menus={menus} />
         <Content>
             <Hero />
             <LearnHow />

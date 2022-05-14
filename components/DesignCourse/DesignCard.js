@@ -1,14 +1,11 @@
 import styled from "styled-components"
-import Image from "next/image"
-// import Card from "../card"
 
 const Container = styled.div`
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
+    align-items: center;
     width: 20%;
     margin: 50px 0 50px;
-    text-align: center;
     color: white;
 `
 const Title = styled.div`
@@ -23,11 +20,12 @@ const Details = styled.div`
 `
 
 const DesignCard = (props) => {
-    const {icon, title, details} = props
+    const {title, details} = props
+    const Icon = <props.icon width='50px' height='50px' color='#0f0' />
 
     return (
         <Container>
-            <Image src={icon.src} width={50} height={50} />
+            {Icon}
             <Title>{title}</Title>
             <Details>{details}</Details>
         </Container>

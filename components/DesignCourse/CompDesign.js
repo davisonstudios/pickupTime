@@ -1,8 +1,10 @@
 import styled from "styled-components"
 import DesignCard from "./DesignCard"
-import flask from '../../images/flask.svg'
-import film from '../../images/film.svg'
-import lightning from '../../images/lightning.svg'
+// import flask from '../../images/flask.svg'
+// import film from '../../images/film.svg'
+// import lightning from '../../images/lightning.svg'
+import {Film, Flask, Lightning} from './Assets/svgs'
+
 
 const Container = styled.div`
     display: flex;
@@ -35,9 +37,9 @@ const CompDesign = () => {
                 UI Design
             </Title>
             <Cards>
-                <DesignCard icon={film} title='Video' details='Learn by video by watching Gary Simon' />
-                <DesignCard icon={flask} title='UI Tests' details='Interactive UI tests are a fun way to learn fundamentals' />
-                <DesignCard icon={lightning} title='Mentor' details='Receive real feedback & guidance for your design submissions' />
+                <DesignCard icon={Film} title='Video' details='Learn by video by watching Gary Simon' />
+                <DesignCard icon={Flask} title='UI Tests' details='Interactive UI tests are a fun way to learn fundamentals' />
+                <DesignCard icon={Lightning} title='Mentor' details='Receive real feedback & guidance for your design submissions' />
             </Cards>
         </Container>
     )
