@@ -20,7 +20,8 @@ const Circle = styled.div`
 `
 
 const Name = styled.p`
-    font-family: 'Arial';
+    font-family: 'Roboto Flex';
+    font-weight: 600;
 `
 
 const PersonBadge = (props) => {
@@ -30,7 +31,7 @@ const PersonBadge = (props) => {
         <Circle>
             <Image src={imageSrc} width='35px' height='35px' />
         </Circle>
-        <p>{name}</p>
+        <Name children={name} />
     </Container>
 }
 

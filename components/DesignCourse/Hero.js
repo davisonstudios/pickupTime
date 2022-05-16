@@ -19,7 +19,7 @@ const Title = styled.div`
 `
 
 const Detail = styled.div`
-    font-family: 'Josefin Slab';
+    font-family: 'Roboto Flex';
     font-size: 1.5em;
     line-height: 1.5em;
     z-index: 5;
@@ -30,10 +30,21 @@ const ImageWrapper = styled.div`
     margin-right: 10%;
     align-self: end;
     z-index: 2;
-    transform: skew(-20deg, 0deg);
-    opacity: 0.5;
     /* background-color: aqua; */
-    @media screen and (max-width: 900px) {
+    animation: skewy 2s ease-in-out infinite alternate;
+    @keyframes skewy {
+        from {
+            transform: skew(-15deg, 0deg);
+            color: #0f0;
+            opacity: 0.5;
+        }
+        to {
+            transform: skew(-10deg, 0deg);
+            color: #0bb;
+            opacity: 0.05;
+        }
+    }
+   @media screen and (max-width: 900px) {
         visibility: hidden;
     }
 `
@@ -49,7 +60,7 @@ const Hero = () => {
             Our Interactive UI/UX Course will help you design better & earn more.
         </Detail>
         <ImageWrapper>
-            <SiteLogo height='250' width='250' color='#0f0' />
+            <SiteLogo height='250' width='250' />
         </ImageWrapper>
     </Container>
 }

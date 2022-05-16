@@ -10,7 +10,7 @@ const Container = styled.section`
     display: flex;
     min-height: 100vh;
     margin: 0;
-    background-color: black;
+    background-color: #181818;
 `
 
 const Content = styled.div`

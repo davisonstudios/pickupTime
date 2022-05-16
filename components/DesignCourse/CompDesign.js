@@ -1,9 +1,7 @@
 import styled from "styled-components"
 import DesignCard from "./DesignCard"
-// import flask from '../../images/flask.svg'
-// import film from '../../images/film.svg'
-// import lightning from '../../images/lightning.svg'
-import {Film, Flask, Lightning} from './Assets/svgs'
+import {Film, Flask, Lightning, Arrow} from './Assets/svgs'
+import MarkdownTest from "./MarkdownTest"
 
 
 const Container = styled.div`
@@ -11,16 +9,13 @@ const Container = styled.div`
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    /* height: 300px; */
     align-items: center;
     text-align: center;
-    /* margin: 200px 0 100px; */
 `
 
 const Title = styled.div`
     font-family: 'Righteous';
     font-size: 40px;
-    /* text-align: center; */
 `
 
 const Cards = styled.div`
@@ -29,18 +24,37 @@ const Cards = styled.div`
     justify-content: space-around;
 `
 
+const Path = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    list-style: none;
+    font-family: 'Righteous';
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+`
+
 const CompDesign = () => {
     return (
         <Container>
             <Title>
-                A Comprehensive Approach to<br/>
-                UI Design
+            A Comprehensive Approach to<br/>
+            UI Design
             </Title>
             <Cards>
                 <DesignCard icon={Film} title='Video' details='Learn by video by watching Gary Simon' />
                 <DesignCard icon={Flask} title='UI Tests' details='Interactive UI tests are a fun way to learn fundamentals' />
                 <DesignCard icon={Lightning} title='Mentor' details='Receive real feedback & guidance for your design submissions' />
             </Cards>
+            <Path>
+                <li>Learn</li>
+                <Arrow color='#0f0' width='20px' />
+                <li>Review</li>
+                <Arrow color='#0f0' width='20px' />
+                <li>Apply</li>
+            </Path>
+            {/* <MarkdownTest /> */}
         </Container>
     )
 }

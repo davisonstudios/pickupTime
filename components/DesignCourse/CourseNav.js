@@ -8,7 +8,7 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: black;
+    background-color: #181818;
     padding: 10px 80px;
     z-index: 100;
 `
@@ -21,7 +21,8 @@ const TitleDiv = styled.div`
 
 const Title = styled.span`
     margin-left: 10px;
-    font-family: 'Amatic SC';
+    /* font-family: 'Amatic SC'; */
+    font-family: 'Righteous';
     font-size: 2em;
     font-weight: bold;
 `
@@ -37,9 +38,9 @@ const Menus = styled.div`
 `
 
 const Anchor = styled.a`
-    font-family: 'Shadows Into Light';
+    font-family: 'Roboto Flex';
     font-size: 1.5em;
-    font-weight: 100;
+    font-weight: 400;
     &:hover {
         color: #0f0;
         font-weight: bold;

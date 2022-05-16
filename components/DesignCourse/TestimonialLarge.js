@@ -7,7 +7,7 @@ const Container = styled.div`
 
 const Quote = styled.p`
     line-height: 1.2;
-    font-family: 'Yantramanav';
+    font-family: 'Roboto Flex';
     font-size: 2rem;
 `
 

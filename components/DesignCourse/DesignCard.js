@@ -5,7 +5,7 @@ const Container = styled.div`
     flex-direction: column;
     align-items: center;
     width: 20%;
-    margin: 50px 0 50px;
+    margin: 50px 0 30px;
     color: white;
 `
 const Title = styled.div`
@@ -15,7 +15,7 @@ const Title = styled.div`
     padding: 30px 0 10px;
 `
 const Details = styled.div`
-    font-family: 'Josefin Slab';
+    font-family: 'Roboto Flex';
     font-size: 20px;
 `
 
