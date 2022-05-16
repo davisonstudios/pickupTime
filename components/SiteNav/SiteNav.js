@@ -15,7 +15,7 @@ function SiteNav(props) {
 
     return (
         <div className={css.nav}>
-            <Image className={css.logo} src={props.logo} alt='' />
+            <Image className={css.logo} src={props.logo} width="50" height="50" alt='' />
             {/* <span className={css.title}>{title}</span> */}
             <Title>{title}</Title>
             <span className={css.menu}>

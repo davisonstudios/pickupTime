@@ -16,7 +16,7 @@ const TestimonialLarge = (props) => {
 
     return <Container>
         <Quote>{quote}</Quote>
-        <PersonBadge name={name} imageSrc='/dennis.png' />
+        <PersonBadge name={name} imageSrc='/images/dennis.png' />
     </Container>
 }
 

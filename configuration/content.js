@@ -2,7 +2,7 @@
 
 export const content = {
     nav: {
-        logo: '../images/icon.jpg',
+        logo: '/images/icon.jpg',
         title: 'VS Events',
         sections: [
             {
@@ -59,37 +59,37 @@ export const content = {
         wideFeatures: [
             {
                 imageOnRight: true,
-                imageUrl: 'https://www.thebostoncalendar.com/system/events/photos/000/320/021/original/prohibition.jpg?1585683178',
+                imageUrl: '/images/prohibition.jpg',
                 title: 'Bar & Bartender Available',
                 detail: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.'
             },
             {
                 imageOnRight: false,
-                imageUrl: 'https://images.pexels.com/videos/4043986/disco-music-nightclub-party-4043986.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200',
+                imageUrl: '/images/disco-music-nightclub-party.jpg',
                 title: 'Great Sound System',
                 detail: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.'
             },
             {
                 imageOnRight: true,
-                imageUrl: 'https://qdobamn.com/wp-content/uploads/2018/08/QDOBA-Wedding-Catering-2-1500x1000.jpg',
+                imageUrl: '/images/Wedding-Catering-2-1500x1000.jpg',
                 title: 'Catering Kitchen',
                 detail: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.'
             },
             {
                 imageOnRight: false,
-                imageUrl: 'https://st3.depositphotos.com/1000260/15076/i/950/depositphotos_150762106-stock-photo-dance-party-with-group-people.jpg',
+                imageUrl: '/images/depositphotos_150762106-stock-photo-dance-party-with-group-people.jpg',
                 title: 'Perfect for Parties',
                 detail: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.'
             },
             {
                 imageOnRight: true,
-                imageUrl: 'https://d1jhy9q0556ci9.cloudfront.net/wp-content/uploads/2018/11/riverwind-meet-corporate-events-main.jpg',
+                imageUrl: '/images/riverwind-meet-corporate-events-main.jpg',
                 title: 'Corporate Events',
                 detail: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.'
             },
             {
                 imageOnRight: false,
-                imageUrl: 'https://static-maps.yandex.ru/1.x/?lang=en-US&ll=-118.475076,34.200977&z=13&l=map&size=600,450&pt=-118.475076,34.200977,flag',
+                imageUrl: '/images/map.jpg',
                 title: 'Contact Us',
                 detail: "123 Some Street Some City, State 99999",
             },

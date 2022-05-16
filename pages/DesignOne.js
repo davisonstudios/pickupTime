@@ -1,7 +1,7 @@
 import css from '../styles/SiteOne.module.css'
 import SiteNav from "../components/SiteNav/SiteNav"
 import Hero from "../components/hero"
-import logo from '../images/icon.jpg'
+import logo from '../public/images/icon.jpg'
 import Feature from '../components/feature'
 import WideFeature from '../components/wideFeature'
 import { content } from '../configuration/content'

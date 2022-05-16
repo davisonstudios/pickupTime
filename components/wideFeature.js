@@ -6,7 +6,9 @@ function WideFeature(props) {
 
     return (
         <div className={imageOnRight ? css.content_imageright : css.content}>
-            <Image className={imageOnRight ? css.imageright : css.image} src={imageUrl} alt='' />
+            <div className={`${css.image} ${imageOnRight ? css.imageright : css.imageleft}`}>
+                <Image src={imageUrl} objectFit="cover" objectPosition="50% 50%" layout="fill" alt='' />
+            </div>
             <div className={imageOnRight ? css.detailsleft : css.details}>
                 <div className={css.heading}>
                     <div>{title}</div>

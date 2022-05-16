@@ -16,7 +16,7 @@ const TestimonialCard = (props) => {
     return <Container>
         <Card>
             <Quote>{quote}</Quote>
-            <PersonBadge name={name} imageSrc='/dennis.png' />
+            <PersonBadge name={name} imageSrc='/images/dennis.png' />
         </Card>
     </Container>
 }
