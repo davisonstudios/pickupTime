@@ -1,5 +1,5 @@
 
-import DesignCoursePage from "../components/DesignCourse/DesignCourse"
+import DesignCoursePage from "../DesignCourse/DesignCourse"
 
 const DesignCourse = () => <DesignCoursePage />
 

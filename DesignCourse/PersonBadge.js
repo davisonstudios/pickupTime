@@ -31,7 +31,7 @@ const PersonBadge = (props) => {
         <Circle>
             <Image src={imageSrc} width='35px' height='35px' />
         </Circle>
-        <Name children={name} />
+        <Name>{name}</Name>
     </Container>
 }
 
