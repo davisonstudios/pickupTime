@@ -62,7 +62,7 @@ const Anchor = styled.a`
 
 const SiteLink = (props) => {
     const {href, title} = props
-    return <Link href={href}><Anchor>{title}</Anchor></Link>
+    return <Link href={href} passHref><Anchor>{title}</Anchor></Link>
 }
 
 const Description = styled.p`

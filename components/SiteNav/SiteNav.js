@@ -1,6 +1,7 @@
 import css from './SiteNav.module.scss'
 import styled from 'styled-components'
 import Button from '../button'
+import Image from 'next/image'
 
 function SiteNav(props) {
     // const logo = require(props.logo)
@@ -14,7 +15,7 @@ function SiteNav(props) {
 
     return (
         <div className={css.nav}>
-            <img className={css.logo} src={props.logo} />
+            <Image className={css.logo} src={props.logo} alt='' />
             {/* <span className={css.title}>{title}</span> */}
             <Title>{title}</Title>
             <span className={css.menu}>

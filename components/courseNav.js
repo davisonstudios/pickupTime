@@ -42,7 +42,7 @@ const Anchor = styled.a`
 
 const MenuItem = props => {
     const {key, menu} = props
-    return <Link key={key} href={menu.href}>
+    return <Link key={key} href={menu.href} passHref>
         <Anchor>{menu.title}</Anchor>
     </Link>
 }
@@ -53,7 +53,7 @@ const CourseNav = props => {
     return (
         <Container>
             <TitleDiv>
-                <Image src={logo} width={30} height={30} />
+                <Image src={logo} width={30} height={30} alt='' />
                 <Title>{title}</Title>
             </TitleDiv>
             <Menus>
