@@ -1,5 +1,6 @@
-import styled from "styled-components"
+import styled, {keyframes} from "styled-components"
 import { SiteLogo } from "./Assets/svgs"
+import { slideDownAnim } from './Animations'
 
 const Container = styled.div`
     display: flex;
@@ -16,6 +17,8 @@ const Title = styled.div`
     font-size: 4em;
     line-height: 1em;
     z-index: 5;
+    opacity: 0;
+    animation: ${slideDownAnim} 0.75s ease-in forwards;
 `
 
 const Detail = styled.div`
@@ -23,6 +26,8 @@ const Detail = styled.div`
     font-size: 1.5em;
     line-height: 1.5em;
     z-index: 5;
+    opacity: 0;
+    animation: ${slideDownAnim} 0.75s 0.75s ease-in forwards;
 `
 
 const ImageWrapper = styled.div`

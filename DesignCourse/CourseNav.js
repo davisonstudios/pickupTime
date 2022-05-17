@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import Link from "next/link";
 import { SiteLogo } from "./Assets/svgs";
+import { breathe } from "./Animations";
 
 const Container = styled.div`
     display: flex;
@@ -19,9 +20,14 @@ const TitleDiv = styled.div`
     color: white;
 `
 
+const PulsingLogo = styled(SiteLogo)`
+    width: 30px;
+    height: 30px;
+    color: #0f0;
+`
+
 const Title = styled.span`
     margin-left: 10px;
-    /* font-family: 'Amatic SC'; */
     font-family: 'Righteous';
     font-size: 2em;
     font-weight: bold;
@@ -43,7 +49,8 @@ const Anchor = styled.a`
     font-weight: 400;
     &:hover {
         color: #0f0;
-        font-weight: bold;
+        text-shadow: 0px 0px 3px #0F0;
+        animation: ${breathe} 3s ease-in-out infinite;
     }
 `
 
@@ -61,7 +68,7 @@ const CourseNav = props => {
     return (
         <Container>
             <TitleDiv>
-                <SiteLogo width={30} height={30} color='#0f0' />
+                <PulsingLogo />
                 <Title>{title}</Title>
             </TitleDiv>
             <Menus>

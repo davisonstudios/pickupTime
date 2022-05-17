@@ -1,10 +1,12 @@
 
 import styled from "styled-components"
 import CourseNav from "./CourseNav"
-import Hero from "../DesignCourse/Hero"
+import Hero from "./Hero"
 import Link from "next/link"
 import Testimonials from "./Testimonials"
 import CompDesign from "./CompDesign"
+import FloatingCards from "./FloatingCards"
+import BallCapsule from "./Gizmos/BallCapsule"
 
 const Container = styled.section`
     display: flex;
@@ -24,33 +26,6 @@ const Content = styled.div`
     height: 100%;
 `
 
-const Capsule = styled.div`
-    width: 20px;
-    height: 40px;
-    border-radius: 1rem;
-    outline-color: #fff;
-    outline-style: solid;
-    outline-width: 2px;
-    /* margin: 10px 0; */
-`
-
-const Ball = styled.div`
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: #0f0;
-    margin: 4px;
-    animation: bounce 0.75s ease-in-out infinite alternate;
-    @keyframes bounce {
-        from { transform: translate3d(0, 0, 0); }
-        to {
-            transform: translate3d(0, 22px, 0);
-            height: 10px;
-            background-color: #0b0;
-        }
-    }
-`
-
 const LearnDiv = styled.div`
     display: flex;
     flex-direction: row;
@@ -63,7 +38,7 @@ const LearnDiv = styled.div`
 
 const LearnHow = () => {
     return <LearnDiv>
-        <Capsule><Ball/></Capsule>
+        <BallCapsule />
         <Link href='#learn'><a>Learn how…</a></Link>
     </LearnDiv>
 }
@@ -82,6 +57,7 @@ const DesignCourse = (props) => {
             <LearnHow />
             <Testimonials />
             <CompDesign />
+            <FloatingCards />
         </Content>
     </Container>
 }
