@@ -31,7 +31,7 @@ const RoundedBox = styled.div`
         }
         100% {
             transform: translate3d(0, -5px, 0);
-            box-shadow: 0 5px 20px #0f0;
+            box-shadow: 0 5px 20px ${({theme}) => theme.colors.accent};
         }
     }
 `

@@ -14,6 +14,7 @@ const Container = styled.div`
 `
 
 const Title = styled.div`
+    color: ${({theme}) => theme.colors.headlines};
     font-family: 'Righteous';
     font-size: 40px;
 `
@@ -33,6 +34,12 @@ const Path = styled.div`
     font-family: 'Righteous';
     font-size: 1.5rem;
     letter-spacing: 0.1rem;
+    color: ${({theme}) => theme.colors.headlines};
+`
+
+const ColoredArrow = styled.div`
+    color: ${({theme}) => theme.colors.accent};
+    width: 20px;
 `
 
 const CompDesign = () => {
@@ -49,9 +56,9 @@ const CompDesign = () => {
             </Cards>
             <Path>
                 <li>Learn</li>
-                <Arrow color='#0f0' width='20px' />
+                <ColoredArrow><Arrow /></ColoredArrow>
                 <li>Review</li>
-                <Arrow color='#0f0' width='20px' />
+                <ColoredArrow><Arrow /></ColoredArrow>
                 <li>Apply</li>
             </Path>
             {/* <MarkdownTest /> */}

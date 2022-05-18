@@ -14,7 +14,7 @@ const BouncingBall = styled.div`
 width: 12px;
 height: 12px;
 border-radius: 50%;
-background-color: #0f0;
+background-color: ${({theme}) => theme.colors.accent};
 margin: 4px;
 animation: bounce 0.75s ease-in-out infinite alternate;
 @keyframes bounce {
@@ -22,7 +22,6 @@ animation: bounce 0.75s ease-in-out infinite alternate;
     to {
         transform: translate3d(0, 22px, 0);
         height: 10px;
-        background-color: #0b0;
     }
 }
 `

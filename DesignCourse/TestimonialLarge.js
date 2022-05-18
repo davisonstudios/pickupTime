@@ -3,6 +3,7 @@ import styled from "styled-components"
 
 const Container = styled.div`
     flex-grow: 4;
+    color: ${({theme}) => theme.colors.text};
 `
 
 const Quote = styled.p`

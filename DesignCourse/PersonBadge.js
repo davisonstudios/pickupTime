@@ -7,7 +7,7 @@ const Container = styled.div`
     justify-content: start;
     align-items: center;
     column-gap: 10px;
-    color: #0f0;
+    color: ${({theme}) => theme.colors.accent};
 `
 
 const Circle = styled.div`
@@ -15,7 +15,7 @@ const Circle = styled.div`
     height: 35px;
     border-style: solid;
     border-radius: 50%;
-    border-color: #0f0;
+    border-color: ${({theme}) => theme.colors.accent};
     overflow: hidden;
 `
 

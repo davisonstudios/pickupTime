@@ -7,12 +7,14 @@ import Testimonials from "./Testimonials"
 import CompDesign from "./CompDesign"
 import FloatingCards from "./FloatingCards"
 import BallCapsule from "./Gizmos/BallCapsule"
+import { ThemeProvider } from "styled-components"
+import { withTheme } from "styled-components"
 
 const Container = styled.section`
     display: flex;
     min-height: 100vh;
     margin: 0;
-    background-color: #181818;
+    background-color: ${({theme}) => theme.colors.background};
 `
 
 const Content = styled.div`
@@ -21,7 +23,6 @@ const Content = styled.div`
     row-gap: 50px;
     padding: 40px 0;
     margin: 0 80px;
-    color: white;
     width: 100%;
     height: 100%;
 `
@@ -33,7 +34,7 @@ const LearnDiv = styled.div`
     align-items: center;
     font-family: 'Verdana';
     font-weight: bold;
-    color: #0f0;
+    color: ${({theme}) => theme.colors.accent};
 `
 
 const LearnHow = () => {
@@ -50,16 +51,29 @@ const DesignCourse = (props) => {
         {key:2, title:'Pickup Time',href:'/PickupTime'},
     ]
 
-    return <Container>
-        <CourseNav title='Design Course' menus={menus} />
-        <Content>
-            <Hero />
-            <LearnHow />
-            <Testimonials />
-            <CompDesign />
-            <FloatingCards />
-        </Content>
-    </Container>
+    const theme = {
+        colors: {
+            background: '#222',
+            logo: '#0ff',
+            accent: '#0ff',
+            headlines: '#fff',
+            text: '#ccc',
+            icons: '#0ff',
+        }
+    }
+
+    return <ThemeProvider theme={theme}>
+        <Container>
+            <CourseNav title='Design Course' menus={menus} />
+            <Content>
+                <Hero />
+                <LearnHow />
+                <Testimonials />
+                <CompDesign />
+                <FloatingCards />
+            </Content>
+        </Container>
+    </ThemeProvider>
 }
 
 export default DesignCourse

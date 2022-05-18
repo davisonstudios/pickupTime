@@ -7,7 +7,8 @@ const Container = styled.div`
 `
 const Quote = styled.p`
     line-height: 1.2;
-    font-family: 'Roboto Flex'
+    font-family: 'Roboto Flex';
+    color: ${({theme}) => theme.colors.text};
 `
 
 const TestimonialCard = (props) => {

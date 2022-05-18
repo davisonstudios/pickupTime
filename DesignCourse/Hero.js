@@ -8,7 +8,6 @@ const Container = styled.div`
     justify-content: center;
     height: 300px;
     margin: 100px 0 0;
-    /* background-color: aquamarine; */
 `
 
 const Title = styled.div`
@@ -16,6 +15,7 @@ const Title = styled.div`
     font-family: 'Koulen';
     font-size: 4em;
     line-height: 1em;
+    color: ${({theme}) => theme.colors.headlines};
     z-index: 5;
     opacity: 0;
     animation: ${slideDownAnim} 0.75s ease-in forwards;
@@ -25,6 +25,7 @@ const Detail = styled.div`
     font-family: 'Roboto Flex';
     font-size: 1.5em;
     line-height: 1.5em;
+    color: ${({theme}) => theme.colors.headlines};
     z-index: 5;
     opacity: 0;
     animation: ${slideDownAnim} 0.75s 0.75s ease-in forwards;
@@ -35,17 +36,16 @@ const ImageWrapper = styled.div`
     margin-right: 10%;
     align-self: end;
     z-index: 2;
-    /* background-color: aqua; */
+    color: ${({theme}) => theme.colors.logo};
     animation: skewy 2s ease-in-out infinite alternate;
     @keyframes skewy {
         from {
             transform: skew(-15deg, 0deg);
-            color: #0f0;
             opacity: 0.5;
         }
         to {
             transform: skew(-10deg, 0deg);
-            color: #0bb;
+            /* color: #0bb; */
             opacity: 0.05;
         }
     }

@@ -20,10 +20,10 @@ const TitleDiv = styled.div`
     color: white;
 `
 
-const PulsingLogo = styled(SiteLogo)`
+const Logo = styled(SiteLogo)`
     width: 30px;
     height: 30px;
-    color: #0f0;
+    color: ${({theme}) => theme.colors.logo};
 `
 
 const Title = styled.span`
@@ -48,8 +48,8 @@ const Anchor = styled.a`
     font-size: 1.5em;
     font-weight: 400;
     &:hover {
-        color: #0f0;
-        text-shadow: 0px 0px 3px #0F0;
+        color: ${({theme}) => theme.colors.accent};
+        text-shadow: 0px 0px 3px ${({theme}) => theme.colors.accent};
         animation: ${breathe} 3s ease-in-out infinite;
     }
 `
@@ -68,7 +68,7 @@ const CourseNav = props => {
     return (
         <Container>
             <TitleDiv>
-                <PulsingLogo />
+                <Logo />
                 <Title>{title}</Title>
             </TitleDiv>
             <Menus>
