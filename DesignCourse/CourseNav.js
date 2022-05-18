@@ -9,7 +9,7 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: #181818;
+    background-color: ${({theme}) => theme.colors.background};
     padding: 10px 80px;
     z-index: 100;
 `
