@@ -4,6 +4,15 @@ backend:
 media_folder: public/img
 public_folder: img
 collections:
+  - label: "Hero"
+    name: "hero"
+    file: "content/hero"
+    format: "json"
+    allow-add: true
+    fields:
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Headline", name: "headline", widget: "string"}
+      - {label: "Subheading", name: "subheading", widget: "string"}
   - label: "Blog"
     name: "blog"
     folder: "content/blog"
