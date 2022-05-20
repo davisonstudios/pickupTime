@@ -6,7 +6,9 @@ public_folder: img
 collections:
   - name: "pages"
     label: "Pages"
-    files:
+    format: "json"
+    create: true
+    folder:
     - label: "Home"
       name: "home"
       file: "content/home.md"
