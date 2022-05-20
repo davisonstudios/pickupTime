@@ -8,10 +8,10 @@ collections:
     label: "Pages"
     format: "json"
     create: true
-    folder:
+    files:
     - label: "Home"
       name: "home"
-      file: "content/home.md"
+      folder: "content"
       fields:
         - { label: "Title", name: "title", widget: "string"}
         - { label: "Publish Date", name: "date", widget: "datetime" }
