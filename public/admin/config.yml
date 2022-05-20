@@ -6,7 +6,7 @@ public_folder: img
 collections:
   - label: "Blog"
     name: "blog"
-    folder: "content/blog"
+    file: "content/blog"
     format: "json"
     create: true
     fields:
@@ -16,7 +16,7 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
   - label: "Features"
     name: "features"
-    folder: "content/features"
+    file: "content/features"
     format: "json"
     create: true
     fields:
