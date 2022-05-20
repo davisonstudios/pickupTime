@@ -4,10 +4,6 @@ const nextConfig = {
     compiler: {
         styledComponents: true,
     },
-    webpack: (config) => {
-        config.experiments = {topLevelAwait: true}
-        return config
-    },
 }
 
 module.exports = nextConfig
