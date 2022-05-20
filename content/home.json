@@ -1,0 +1,11 @@
+{
+  "date": "2022-05-20T17:45:27.850Z",
+  "title": "Test Title",
+  "body": "# This is the **_Markdown_** etc\nIf you need to ask, you can't afford it.",
+  "cats": [
+    {
+      "name": "Floofy",
+      "description": "Floofy the wonder cat"
+    }
+  ]
+}
