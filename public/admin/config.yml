@@ -19,6 +19,7 @@ collections:
         name: "blog"
         file: "content/blog.json"
         format: "json"
+        create: true
         widget: list
         fields:
           - {label: "Title", name: "title", widget: "string"}
@@ -29,6 +30,7 @@ collections:
         name: "features"
         file: "content/features.json"
         format: "json"
+        create: true
         widget: list
         fields:
           - {label: "Title", name: "title", widget: "string"}
