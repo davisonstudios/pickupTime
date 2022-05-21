@@ -4,30 +4,33 @@ backend:
 media_folder: public/img
 public_folder: img
 collections:
-  - label: "Hero"
-    name: "hero"
-    file: "content/hero"
-    format: "json"
-    fields:
-      - {label: "Image", name: "image", widget: "image"}
-      - {label: "Headline", name: "headline", widget: "string"}
-      - {label: "Subheading", name: "subheading", widget: "string"}
-  - label: "Blog"
-    name: "blog"
-    folder: "content/blog"
-    format: "json"
-    create: true
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
-      - {label: "Body", name: "body", widget: "markdown"}
-  - label: "Features"
-    name: "features"
-    folder: "content/features"
-    create: true
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
-      - {label: "Body", name: "body", widget: "markdown"}
+  - label: "Site"
+    name: "site"
+    files:
+      - label: "Hero"
+        name: "hero"
+        file: "content/hero.json"
+        format: "json"
+        fields:
+          - {label: "Image", name: "image", widget: "image"}
+          - {label: "Headline", name: "headline", widget: "string"}
+          - {label: "Subheading", name: "subheading", widget: "string"}
+      - label: "Blog"
+        name: "blog"
+        file: "content/blog.json"
+        format: "json"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Publish Date", name: "date", widget: "datetime"}
+          - {label: "Featured Image", name: "thumbnail", widget: "image"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - label: "Features"
+        name: "features"
+        file: "content/features.json"
+        format: "json"
+        create: true
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Publish Date", name: "date", widget: "datetime"}
+          - {label: "Featured Image", name: "thumbnail", widget: "image"}
+          - {label: "Body", name: "body", widget: "markdown"}
