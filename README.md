@@ -1,34 +1,10 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+These are a few projects and WIPs I am working on for the school. Some are just portfolio pieces that I was playing with:
 
-## Getting Started
+**1. VS Events** is a proof-of-concept for a banquet hall rental business that the owner of Valley School is planning for renting out school facilities on evenings/weekends for events.
+https://valleyschool.netlify.app/DesignOne
 
-First, run the development server:
+**2. PickupTime** is a proof-of-concept for a simpler way than using walkie talkies where kids who's parents are here can be set to "Ready for Pickup" and it could show up in a web page or phone app to let teachers and playground supervisors know when a parent has arrived.It is using rest calls to fetch data from Airtable on the back end as a simple db to store kids and their ready states.
+https://valleyschool.netlify.app/PickupTime
 
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**3. Design Course** is a clone of an existing site I liked. I built it as a potential portfolio piece. All the animations and cards etc were written from scratch. It was a self-assigned challenge to make something like the real site.
+https://valleyschool.netlify.app/DesignCourse
